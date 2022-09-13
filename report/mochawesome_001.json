@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-12T08:11:49.915Z",
+    "end": "2022-09-12T08:12:27.893Z",
+    "duration": 37978,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2644022a-e99f-4816-83b7-8eebf0f5e203",
+      "title": "",
+      "fullFile": "cypress/e2e/search_and_order_products/verify_user_is_successfully_search_and_order_products.ts",
+      "file": "cypress/e2e/search_and_order_products/verify_user_is_successfully_search_and_order_products.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "49ced8d1-9cd2-4f40-b894-7ce14a06c7e8",
+          "title": "Verify user is successfully able to search and order products",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify order is placed successfully for single items",
+              "fullTitle": "Verify user is successfully able to search and order products Verify order is placed successfully for single items",
+              "timedOut": null,
+              "duration": 24709,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "endUser.clearBasketItems();\ncy.log(\"Go to Basket and clear all products\");\nendUser.addProductToBasket(1);\ncy.log(\"Add product to bucket based on card number\");\nendUser.tapOnBasket();\ncy.log(\"Go back to basket again to complete the order\");\nendUser.verifyBasketItemsAndTapOnCheckout(1);\ncy.log(\"validate basket contains item and hit checkout\");\nendUser.tapOnAddNewAddress();\ncy.log(\"tap on new address button to open up a form\");\nendUser.fillAddressForm();\ncy.log(\"Fill all the fields in the form and hit submit\");\nendUser.selectDeliveryAddress(0);\ncy.log(\"It will redirect us to main page where address radio button is available tap on it\");",
+              "err": {},
+              "uuid": "5161ca43-a765-4493-9ded-9f80ad433da8",
+              "parentUUID": "49ced8d1-9cd2-4f40-b894-7ce14a06c7e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify order is placed successfully for two items",
+              "fullTitle": "Verify user is successfully able to search and order products Verify order is placed successfully for two items",
+              "timedOut": null,
+              "duration": 10955,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "endUser.tapOnNavbarLogo();\ncy.log(\"tap on logo button to load home page\");\nendUser.addProductToBasket(2, 3);\ncy.log(\"Add products to bucket based on card numbers\");\nendUser.tapOnBasket();\ncy.log(\"Go back to basket again to complete the order\");\nendUser.verifyBasketItemsAndTapOnCheckout(3);\ncy.log(\"validate basket contains right items and hit checkout\");\nendUser.tapOnAddNewAddress();\ncy.log(\"tap on new address button to open up a form\");\nendUser.fillAddressForm();\ncy.log(\"Fill all the fields in the form and hit submit\");\nendUser.selectDeliveryAddress(1);\ncy.log(\"It will redirect us to main page where address radio button is available tap on it\");",
+              "err": {},
+              "uuid": "5fa5d9e8-e41c-4184-ab93-305dc4267bcd",
+              "parentUUID": "49ced8d1-9cd2-4f40-b894-7ce14a06c7e8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate search is working good for specific product",
+              "fullTitle": "Verify user is successfully able to search and order products Validate search is working good for specific product",
+              "timedOut": null,
+              "duration": 667,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "endUser.searchAppleFromProducts();\ncy.log(\"searched for product Apple and it gave us 2 result that contains Apple as keyword not banana\");",
+              "err": {},
+              "uuid": "388507d0-d536-43cc-961b-38305c740430",
+              "parentUUID": "49ced8d1-9cd2-4f40-b894-7ce14a06c7e8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5161ca43-a765-4493-9ded-9f80ad433da8",
+            "5fa5d9e8-e41c-4184-ab93-305dc4267bcd",
+            "388507d0-d536-43cc-961b-38305c740430"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 36331,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
