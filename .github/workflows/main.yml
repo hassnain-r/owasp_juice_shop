@@ -25,10 +25,9 @@
         
 name:
   Lightbeam e2e Tests
-on:
+on: [push]
   # Triggers the workflow every 5 minutes
-  schedule:
-    - cron: '*/5 * * * *'
+
     
 jobs:
   e2e-Test-Cycle:
