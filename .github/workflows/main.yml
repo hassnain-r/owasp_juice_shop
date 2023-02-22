@@ -60,3 +60,4 @@ jobs:
         node-version: '14.x'
     - run: npm install
     - run: npm run test
+      working-directory: ./owasp_juice_shop/cypress_code/owasp_automation
