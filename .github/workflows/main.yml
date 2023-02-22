@@ -23,22 +23,40 @@
 #         run: npm run test
         
         
-name:
-  Lightbeam e2e Tests
-on: [push]
-  # Triggers the workflow every 5 minutes
+# name:
+#   Lightbeam e2e Tests
+# on: [push]
+#   # Triggers the workflow every 5 minutes
 
     
+# jobs:
+#   e2e-Test-Cycle:
+#     runs-on: macos-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       # Install NPM dependencies, cache them correctly
+#       # and run all Cypress tests
+#       - name: e2e Tests
+#         uses: cypress-io/github-action@v2
+#         with:
+#           build: npm run test || true
+#         continue-on-error: true
+
+name: Lightbeam e2e Tests
+
+on: [push]
+
 jobs:
-  e2e-Test-Cycle:
+  build:
+
     runs-on: macos-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: e2e Tests
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run test || true
-        continue-on-error: true
+    - uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14.x'
+    - run: npm ci
+    - run: npm run test
